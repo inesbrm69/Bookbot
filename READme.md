@@ -25,7 +25,7 @@ source bookbot_env/bin/activate
 ```
 #### Etape 3 : Installer les packages nécessaires
 ```bash
-pip install -r ./requirement.txt
+pip install -r ./requirements.txt
 ```
 #### Etape 4 : Vérifiez les installations
 ```bash
