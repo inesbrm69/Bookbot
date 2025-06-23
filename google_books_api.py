@@ -13,7 +13,7 @@ def get_summary_by_title(title: str) -> str:
     }
     r = requests.get("https://www.googleapis.com/books/v1/volumes", params=params)
     if r.status_code != 200:
-        return "❌ Erreur lors de la recherche du résumé."
+        return "Erreur lors de la recherche du résumé."
 
     items = r.json().get("items", [])
     if not items:
@@ -32,7 +32,7 @@ def get_summary_by_title(title: str) -> str:
     else:
         return f"Désolé, je n’ai pas trouvé de résumé en français pour « {title} »."
 
-def search_books(entities: dict) -> list:
+def search_books(entities: dict, offset: int = 0) -> list:
     query = clean_text(entities.get("keywords", ""))
     min_year = entities.get("min_year")
     min_rating = entities.get("min_rating")
@@ -40,6 +40,7 @@ def search_books(entities: dict) -> list:
     params = {
         "q": query,
         "maxResults": 10,
+        "startIndex": offset,
         "printType": "books",
         "langRestrict": "fr"
     }
