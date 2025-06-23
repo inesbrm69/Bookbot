@@ -11,17 +11,17 @@ Il vous aide à rechercher des livres via l'API Google Books.
 
 ##### Etape 1 : Créer un environnement virtuel
     ```bash
-        pyhton -m venv bookbot_env
+        python -m venv bookbot_env
     ```
 
 ##### Etape 2 : Activer l'environnement virtuel
 Sur Windows:
 ```bash
-.\chatbot_env\Scripts\activate
+.\bookbot_env\Scripts\activate
 ```
 Sur macOS et Linux:
 ```bash
-source chatbot_env/bin/activate
+source bookbot_env/bin/activate
 ```
 #### Etape 3 : Installer les packages nécessaires
 ```bash
