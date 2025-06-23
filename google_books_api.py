@@ -36,6 +36,7 @@ def search_books(entities: dict, offset: int = 0) -> list:
     query = clean_text(entities.get("keywords", ""))
     min_year = entities.get("min_year")
     min_rating = entities.get("min_rating")
+    limit = entities.get("limit", 3)  # valeur par défaut si non fournie
 
     params = {
         "q": query,
@@ -72,6 +73,8 @@ def search_books(entities: dict, offset: int = 0) -> list:
 
         if min_rating and (not rating or rating < min_rating):
             continue
+        if len(books) >= limit:
+            break
 
         out = f"📘 *{title}* - {authors}"
         if rating:
