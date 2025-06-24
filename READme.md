@@ -1,6 +1,6 @@
-## BookBot
+# BookBot
 
-### Présentation
+## Présentation
 BookBot est un agent conversationnel développé en Python qui permet aux utilisateurs de recevoir des suggestions personnalisées de livres en français, basées sur :
 
 un thème, un auteur, un genre ou un mot-clé,
@@ -13,7 +13,7 @@ et même des fautes de frappe.
 
 Il s'appuie sur l'API Google Books pour récupérer en temps réel les informations, résumés, auteurs et liens vers les ouvrages.
 
-### Fonctionnement conversationnel
+## Fonctionnement conversationnel
 BookBot comprend des requêtes naturelles telles que :
 
 - "Je veux un livre de *Victor Hugo* ?"
@@ -24,7 +24,7 @@ BookBot comprend des requêtes naturelles telles que :
 
 - "Trouve-moi un livre de développement personnel."
 
-### Fonctionnalités principales
+## Fonctionnalités principales
 - Recherche par :
     - auteur, titre, thème, ambiance (ex: "livre triste", "effrayant", "romantique")
 
@@ -37,12 +37,36 @@ BookBot comprend des requêtes naturelles telles que :
 
 - lien Google Books pour chaque résultat
 
-### Limites
+## Limites
     - La pertinence dépend fortement des résultats de l’API Google Books
     
     - Ne fonctionne que pour les livres disponibles en ligne
 
     - Pas de conversation multi-tour complexe (pas de dialogue profond)
+
+## Architecture
+Bookbot/
+├── Bookbot_back/               # Backend Python (Flask)
+│   ├── chatbot.py                 # Logique du chatbot (intents, mémoire, réponse)
+│   ├── google_books_api.py       # Connexion et recherche via Google Books API
+│   ├── nlp.py                    # Extraction des entités (année, genre, nombre...)
+│   ├── utils.py                  # Fonctions utilitaires (correction, nettoyage)
+│   ├── main.py                   # API Flask (point d’entrée)
+│   ├── requirements.txt          # Dépendances Python
+│   └── README.md                 # Documentation backend
+
+├── Bookbot_front/              # Frontend Vue.js (Vite)
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── BookBotChat.vue   # Composant principal du chatbot
+│   │   ├── App.vue               # Application racine Vue
+│   │   ├── main.js               # Entrée JS
+│   │   └── style.css             # Feuille de style globale
+│   ├── index.html                # Page HTML principale
+│   ├── package.json              # Dépendances frontend
+│   └── README.md                 # Documentation frontend
+
+.gitignore                      # Fichiers à ignorer (backend & frontend)
 
 #### Lancer le bot
     ```bash
