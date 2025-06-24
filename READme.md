@@ -50,28 +50,7 @@ BookBot comprend des requêtes naturelles telles que :
     - Pas de conversation multi-tour complexe (pas de dialogue profond)
 
 ## Architecture
-Bookbot/
-├── Bookbot_back/               # Backend Python (Flask)
-│   ├── chatbot.py                 # Logique du chatbot (intents, mémoire, réponse)
-│   ├── google_books_api.py       # Connexion et recherche via Google Books API
-│   ├── nlp.py                    # Extraction des entités (année, genre, nombre...)
-│   ├── utils.py                  # Fonctions utilitaires (correction, nettoyage)
-│   ├── main.py                   # API Flask (point d’entrée)
-│   ├── requirements.txt          # Dépendances Python
-│   └── README.md                 # Documentation backend
-
-├── Bookbot_front/              # Frontend Vue.js (Vite)
-│   ├── src/
-│   │   ├── components/
-│   │   │   └── BookBotChat.vue   # Composant principal du chatbot
-│   │   ├── App.vue               # Application racine Vue
-│   │   ├── main.js               # Entrée JS
-│   │   └── style.css             # Feuille de style globale
-│   ├── index.html                # Page HTML principale
-│   ├── package.json              # Dépendances frontend
-│   └── README.md                 # Documentation frontend
-
-.gitignore                      # Fichiers à ignorer (backend & frontend)
+![alt text](image.png)
 
 #### Lancer le bot
 ```bash
