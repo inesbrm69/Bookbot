@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # BookBot
+=======
+## BookBot
+https://bookbot-front.onrender.com/
+>>>>>>> ad03378ad34e4c22d911ef8d6df577871d991d81
 
 ## Présentation
 BookBot est un agent conversationnel développé en Python qui permet aux utilisateurs de recevoir des suggestions personnalisées de livres en français, basées sur :
