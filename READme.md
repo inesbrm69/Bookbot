@@ -69,15 +69,15 @@ Bookbot/
 .gitignore                      # Fichiers à ignorer (backend & frontend)
 
 #### Lancer le bot
-    ```bash
-        python main.py
-    ```
+```bash
+    python main.py
+```
 #### Pour avoir un environnement chatbot 
 
 ##### Etape 1 : Créer un environnement virtuel
-    ```bash
-        python -m venv bookbot_env
-    ```
+```bash
+    python -m venv bookbot_env
+```
 
 ##### Etape 2 : Activer l'environnement virtuel
 Sur Windows:
